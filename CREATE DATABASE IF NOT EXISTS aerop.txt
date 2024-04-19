@@ -1,0 +1,44 @@
+CREATE DATABASE IF NOT EXISTS aeroporto;
+USE aeroporto;
+
+
+CREATE TABLE IF NOT EXISTS passageiros(
+cpf varchar(15) primary key not null,
+nome varchar(50) not null,
+data_nasciment date not null,
+nacionalidade varchar(20) not null,
+email varchar(20)
+);
+
+CREATE TABLE IF NOT EXISTS reservas(
+cod_reserva varchar(15) primary key not null,
+data_reserva date not null,
+forma_de_pagamento varchar(15) not null,
+valor decimal (10,2) not null
+);
+
+CREATE TABLE IF NOT EXISTS aeroportos(
+cod_aeroporto varchar(15) primary key not null
+pais varchar(20),
+cidade varchar(20)
+);
+
+CREATE TABLE IF NOT EXISTS cias_aereas(
+id_cia varchar(15) primary key not null
+);
+
+CREATE TABLE IF NOT EXISTS aeronaves(
+
+);
+
+CREATE TABLE IF NOT EXISTS voos(
+
+);
+
+CREATE TABLE IF NOT EXISTS voos_has_reservas(
+
+);
+
+CREATE TABLE IF NOT EXISTS passageiros_has_reservas(
+
+);
